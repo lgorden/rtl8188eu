@@ -114,6 +114,7 @@ static void rtw_dev_shutdown(struct device *dev)
 #endif
 
 #define USB_VENDER_ID_REALTEK		0x0BDA
+#define TPLINK_VENDOR_ID		0x2357
 
 #define RTL8188E_USB_IDS \
 	/*=== Realtek demoboard ===*/ \
@@ -121,7 +122,8 @@ static void rtw_dev_shutdown(struct device *dev)
 	{USB_DEVICE(USB_VENDER_ID_REALTEK, 0x0179)}, /* 8188ETV */ \
 	/*=== Customer ID ===*/ \
 	/****** 8188EUS ********/ \
-	{USB_DEVICE(0x07B8, 0x8179)}, /* Abocom - Abocom */
+	{USB_DEVICE(0x07B8, 0x8179)}, /* Abocom - Abocom */ \
+	{USB_DEVICE(TPLINK_VENDOR_ID, 0x010c)}, /* TP-LINK TL-WN722N */
 
 static struct usb_device_id rtw_usb_id_tbl[] ={
 	RTL8188E_USB_IDS

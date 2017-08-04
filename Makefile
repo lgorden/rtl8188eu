@@ -147,10 +147,13 @@ else
 
 export CONFIG_RTL8188EU = m
 
-all: modules
+SRC := $(shell pwd)
 
-modules:
-	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KSRC) M=$(shell pwd)  modules
+all:
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC)
+
+modules_install:
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules_install
 
 strip:
 	$(CROSS_COMPILE)strip 8188eu.ko --strip-unneeded
