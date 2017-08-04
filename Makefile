@@ -145,6 +145,8 @@ obj-$(CONFIG_RTL8188EU) := 8188eu.o
 
 endif
 
+SRC := $(shell pwd)
+
 all: yocto_build
 
 yocto_build:
