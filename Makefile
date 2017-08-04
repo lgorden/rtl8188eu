@@ -145,7 +145,13 @@ obj-$(CONFIG_RTL8188EU) := 8188eu.o
 
 endif
 
-all: modules
+all: yocto_build
+
+yocto_build:
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC)
+
+modules_install:
+	$(MAKE) -C $(KERNEL_SRC) M=$(SRC) modules_install
 
 modules:
 	$(MAKE) ARCH=$(ARCH) CROSS_COMPILE=$(CROSS_COMPILE) -C $(KSRC) M=$(shell pwd)  modules
