@@ -22,7 +22,7 @@
 /*
  * Public  General Config
  */
-#define RTL871X_MODULE_NAME "88EU"
+#define RTL871X_MODULE_NAME "8188EU"
 #define DRV_NAME "rtl8188eu"
 
 /*
