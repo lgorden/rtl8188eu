@@ -24,6 +24,8 @@ CONFIG_USB_HCI = y
 CONFIG_BT_COEXIST = n
 CONFIG_WOWLAN = n
 
+CONFIG_DRIVER_NL80211 = y
+
 export TopDIR ?= $(shell pwd)
 
 
